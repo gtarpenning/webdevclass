@@ -1,0 +1,28 @@
+
+<script type="text/javascript" src="/js/blogPage.js"></script>
+
+<div id=center1>
+{{bodytext}}
+</div>
+
+<div class="btn btn-default" id="clickmebutton3">Colorify!</div>
+
+<table id=whitetable>
+  <br>
+  <br>
+  <tr>
+    <th>Like Post</th>
+    <th>Name</th>
+    <th>Likes</th>
+    <th>Blog</th>
+  </tr>
+{{#each userlist}}
+  <tr>
+    <td class="btn btn-default" tweat="23" id='{{@index}}' perch='button'>Like!</div>
+    <td class="btn btn-default" tweat="25" id='{{@index}}' perch='delete'>Hide</div>
+    <td id=name{{@index}}>{{this.author.name}}</td>
+    <td type="value" id=views{{@index}} data-id={{this.author.name}}>{{this.views}}</td>
+    <td class="blogtext" data-id={{this.author.name}} >{{this.blogpost}}</td>
+  </tr>
+{{/each}}
+</table>

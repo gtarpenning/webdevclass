@@ -1,0 +1,21 @@
+<div id=center1>
+{{bodytext}}
+</div>
+<table id=whitetable>
+  <br>
+  <br>
+  <tr>
+    <th>User</th>
+    <th>First Name and Last Initial</th>
+    <th>City</th>
+    <th>Views</th>
+  </tr>
+{{#each userlist}}
+  <tr>
+    <td> #{{@index}} </td>
+    <td> {{this.author.name}} </td>
+    <td> {{this.author.city}} </td>
+    <td> {{this.views}} </td>
+  </tr>
+{{/each}}
+</table>
