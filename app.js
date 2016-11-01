@@ -18,7 +18,7 @@ var app = express();
 var mongo = require('mongodb');
 var monk = require('monk');
 
-var dbaddress = process.env.MONGO_URL;
+var dbaddress = 'ds047020.mlab.com:47020/usercollection';
 if (! dbaddress) {
   throw new Error("No MONGO_URL environment variable set!");
 }
