@@ -17,7 +17,14 @@ var app = express();
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/test');
+
+var dbaddress = process.env.MONGO_URL;
+if (! dbaddress) {
+  throw new Error("No MONGO_URL environment variable set!");
+}
+
+console.log('Using DB Address: ' + dbaddress);
+var db = monk(dbaddress);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
