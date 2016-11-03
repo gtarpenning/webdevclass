@@ -22,7 +22,7 @@
     <td class="btn btn-default" tweat="25" id='{{@index}}' perch='delete'>Hide</div>
     <td id=name{{@index}}>{{this.author.name}}</td>
     <td type="value" id=views{{@index}} data-id={{this.author.name}}>{{this.views}}</td>
-    <td class="blogtext" data-id={{this.author.name}} >{{this.blogpost}}</td>
+    <td class="blogtext" data-id=blogname{{this.author.name}}>{{this.blogpost}}</td>
   </tr>
 {{/each}}
 </table>
