@@ -25,9 +25,10 @@ $(document).ready(function (){
       });
     });
   });
-  $ ('td[perch="button"]').each(function(i) {
-    $ ('#'+i).on('click', function () {
-      $('td[data-id='this.author.name']').text('');
-    });
-  });
+  //$ ('td[perch="button"]').each(function(i) {
+   // $ ('#'+i).on('click', function () {
+   //   $('td[data-id=' + this.author.name + ']').text('');
+
+   // });
+  //});
 });
