@@ -21,13 +21,21 @@ $(document).ready(function (){
       });
       request.done(function(response) {
         console.log(response);
-        $('[data-id='+(response.name)+']').text(response.views);
+        $('[data-id='+ response.name +']').text(response.views);
       });
     });
   });
-  $ ('td[perch="button"]').each(function(i) {
+  $ ('td[perch="delete"]').each(function(i) {
     $ ('#'+i).on('click', function () {
-      $('td[data-id=' + this.author.name + ']').text('');
+      var request = $.ajax({
+        method: 'POST',
+        url: '/delete1',
+        data: {
+          name: $('#name'+i).text(),
+          delete: 1,
+        },
+        dataType: 'JSON',
+      });
     });
   });
 });

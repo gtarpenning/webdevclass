@@ -9,6 +9,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var adduser = require('./routes/adduser');
 var like = require('./routes/like');
+var delete = require('./routes/delete1');
 var uitests = require('./routes/uitests');
 var AddUserPage = require('./routes/AddUserPage');
 var blogPage  = require('./routes/blogPage');
@@ -52,6 +53,7 @@ app.use('/uitests', uitests);
 app.use('/AddUserPage', AddUserPage);
 app.use('/blogPage', blogPage);
 app.use('/like', like);
+app.use('/delete', delete1);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
