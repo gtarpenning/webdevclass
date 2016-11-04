@@ -53,7 +53,7 @@ app.use('/uitests', uitests);
 app.use('/AddUserPage', AddUserPage);
 app.use('/blogPage', blogPage);
 app.use('/like', like);
-app.use('/delete', delete1);
+app.use('/delete1', delete1);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
